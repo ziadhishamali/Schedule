@@ -1,33 +1,189 @@
+::-webkit-scrollbar {
+  width: 8px;
+  position: absolute;
+  background-color: white;
+  /*background-image: url("../images/home.jpg");*/
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00b7ff;
+  border-radius: 4px;
+  -webkit-transition-duration: 0.3s; /* Safari */
+  transition-duration: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #02a3e2;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.justify {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.align {
+  align-items: center;
+}
+
+.small {
+  font-size: 18px;
+}
+
+.medium {
+  font-size: 30px;
+}
+
+.black-text {
+  color: rgb(67, 67, 67);
+}
+
+.white-text {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.blue-text {
+  color: #00b7ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.berlin {
+  font-family: "Berlin Sans FB";
+}
+
+.forte {
+  font-family: "Forte";
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.box-shadow {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-shadow-2 {
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.22), 0 7px 21px 0 rgba(0, 0, 0, 0.21);
+}
+
+.blue-background {
+  background-color: #00b7ff !important;
+}
+
+.blue-background-2 {
+  background-color: #49cbff !important;
+}
+
+.blue-background-3 {
+  background-color: #7bdaff !important;
+}
+
+.blue-background-4 {
+  background-color: #9fe4ff !important;
+}
+
+.green-background {
+  background-color: rgb(44, 214, 44) !important;
+}
+
+.green-background-2 {
+  background-color: rgb(74, 215, 74) !important;
+}
+
+
+
+/* Home.js */
+.home {
+  margin-top: 50px;
+  height: auto;
+  width: 100%;
+}
+
+.title-container {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 25px;
+  color: white;
+  background-color: #00b7ff;
+  border-radius: 0px 0px 20px 20px;
+  padding: 10px;
+  font-family: "Forte";
+  font-weight: bolder;
+}
+
+
+
+
+
+
+/* Table.js */
+.table {
+  margin: 0px;
+  padding: 0px;
+  height: 200vh;
+  width: 95vw;
+  overflow-y: auto;
+}
+
+
+
+
+
+/* Days.js */
+.days {
+
+}
+
+.day, .content-name, .content-instructor, .content-type {
+  margin: 5px;
+  height: calc((100vh - 60px) / 3);
+  width: 15vw;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.content-name, .content-instructor, .content-type {}
+
+.content-name {
+  width: 35vw;
+}
+
+.content-instructor {
+  width: 25vw;
+}
+
+.divide {
+  height: calc(((100vh - 60px) / 3) / 6);
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.divide:last-child {
+  border-bottom: none;
 }
