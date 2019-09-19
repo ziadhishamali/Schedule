@@ -110,6 +110,14 @@
   background-color: rgb(88, 212, 88) !important;
 }
 
+.orange-background {
+  background-color: orange !important;
+}
+
+.orange-background-2 {
+  background-color: rgb(255, 178, 35) !important;
+}
+
 
 
 /* Home.js */
@@ -130,11 +138,11 @@
 }
 
 .title {
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   background-color: #00b7ff;
   border-radius: 0px 0px 20px 20px;
-  padding: 10px;
+  padding: 18px;
   font-family: "Forte";
   font-weight: bolder;
 }
@@ -159,7 +167,7 @@
 
 /* Days.js */
 .day, .content-name, .content-instructor, .content-type, .time {
-  margin: 0.25vw;
+  margin: 0.6vw 0.2vw;
   height: calc((250vh - 3vw) / 6);
   width: 12vw;
   border-radius: 25px 5px 5px 25px;
@@ -179,10 +187,6 @@
   width: 28vw;
 }
 
-.loader-container {
-  background-color: white;
-}
-
 .time {
   width: 10vw;
 }
@@ -198,4 +202,8 @@
 
 .divide:last-child {
   border-bottom: none;
+}
+
+.banner {
+  height: calc(((250vh - 3vw) / 6) / 6);
 }

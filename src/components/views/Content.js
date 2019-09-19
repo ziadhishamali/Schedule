@@ -47,7 +47,19 @@ const Content = ({contents}) => {
         })
     ) : (
         new Array(6).fill(0).map((ele, idx) => {
-            return <Loader key={idx} />
+            return (
+                <div key={idx} className="flex-row justify align">
+                    <div className={"content-name flex-column justify align box-shadow black-text"}>
+                        <Loader />
+                    </div>
+                    <div className={"content-instructor flex-column justify align box-shadow black-text"}>
+                        <Loader />
+                    </div>
+                    <div className={"content-type flex-column justify align box-shadow black-text"}>
+                        <Loader />
+                    </div>
+                </div>
+            )
         })
     )
 
