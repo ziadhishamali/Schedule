@@ -10,7 +10,7 @@ const getAll = (content, type) => {
 
 const Content = ({contents}) => {
 
-    const contentTable = contents.map((content, idx) => {
+    const contentTable = contents ? ( contents.map((content, idx) => {
         let background = "";
         let today = new Date().getDay() + 1;
         if (today === 7) {
@@ -42,7 +42,9 @@ const Content = ({contents}) => {
                 </div>
             </div>
         )
-    })
+    }) ) : (
+        <div></div>
+    )
 
     return (
         <div className="contents flex-column justify align">
