@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Days from './views/Days';
 import Content from './views/Content';
+import Times from './views/Times';
 
 class Table extends Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class Table extends Component {
         return ( 
             <div className="table flex-row justify align">
                 <Days />
+                <Times />
                 <Content contents={this.props.data}/>
             </div>
         );

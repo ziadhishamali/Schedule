@@ -15,13 +15,13 @@ const Days = () => {
             tomorrow = 6;
         }
         if (idx === today) {
-            background = " blue-background-2 white-text";
+            background = " blue-background white-text";
         }
         if (idx === tomorrow) {
-            background = " blue-background-4 white-text";
+            background = " blue-background-3 white-text";
         }
         if (idx === 5) {
-            background = " green-background-2 white-text";
+            background = " green-background white-text";
         }
         return (
             <div key={idx} className={"day flex-column justify align box-shadow black-text" + background}>

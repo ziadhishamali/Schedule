@@ -62,6 +62,10 @@
   color: #00b7ff;
 }
 
+.orange-text {
+  color: orange;
+}
+
 .berlin {
   font-family: "Berlin Sans FB";
 }
@@ -103,14 +107,15 @@
 }
 
 .green-background-2 {
-  background-color: rgb(74, 215, 74) !important;
+  background-color: rgb(88, 212, 88) !important;
 }
 
 
 
 /* Home.js */
 .home {
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 40px;
   height: auto;
   width: 100%;
 }
@@ -143,7 +148,7 @@
 .table {
   margin: 0px;
   padding: 0px;
-  height: 200vh;
+  height: 250vh;
   width: 95vw;
   overflow-y: auto;
 }
@@ -153,30 +158,33 @@
 
 
 /* Days.js */
-.days {
-
-}
-
-.day, .content-name, .content-instructor, .content-type {
+.day, .content-name, .content-instructor, .content-type, .time {
   margin: 5px;
-  height: calc((100vh - 60px) / 3);
-  width: 15vw;
-  border-radius: 20px;
+  height: calc((250vh - 60px) / 6);
+  width: 12vw;
+  border-radius: 25px 5px 5px 25px;
   background-color: white;
 }
 
-.content-name, .content-instructor, .content-type {}
-
-.content-name {
-  width: 35vw;
+.content-name, .content-instructor, .content-type, .time {
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
 }
 
-.content-instructor {
-  width: 25vw;
+.content-type {
+  border-radius: 5px 25px 25px 5px;
+}
+
+.content-name, .content-instructor {
+  width: 28vw;
+}
+
+.time {
+  width: 10vw;
 }
 
 .divide {
-  height: calc(((100vh - 60px) / 3) / 6);
+  height: calc(((250vh - 60px) / 6) / 6);
   width: 90%;
   display: flex;
   justify-content: center;

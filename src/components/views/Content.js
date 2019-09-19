@@ -21,13 +21,13 @@ const Content = ({contents}) => {
             tomorrow = 6;
         }
         if (idx === today) {
-            background = " blue-background white-text";
+            background = " blue-background-2 white-text";
         }
         if (idx === tomorrow) {
-            background = " blue-background-3 white-text";
+            background = " blue-background-4 white-text";
         }
         if (idx === 5) {
-            background = " green-background white-text";
+            background = " green-background-2 white-text";
         }
         return (
             <div key={idx} className="flex-row justify align">
