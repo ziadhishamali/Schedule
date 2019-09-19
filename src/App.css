@@ -148,7 +148,7 @@
 .table {
   margin: 0px;
   padding: 0px;
-  height: 250vh;
+  height: auto;
   width: 95vw;
   overflow-y: auto;
 }
@@ -159,8 +159,8 @@
 
 /* Days.js */
 .day, .content-name, .content-instructor, .content-type, .time {
-  margin: 5px;
-  height: calc((250vh - 60px) / 6);
+  margin: 0.25vw;
+  height: calc((250vh - 3vw) / 6);
   width: 12vw;
   border-radius: 25px 5px 5px 25px;
   background-color: white;
@@ -179,12 +179,16 @@
   width: 28vw;
 }
 
+.loader-container {
+  background-color: white;
+}
+
 .time {
   width: 10vw;
 }
 
 .divide {
-  height: calc(((250vh - 60px) / 6) / 6);
+  height: calc(((250vh - 3vw) / 6) / 6);
   width: 90%;
   display: flex;
   justify-content: center;
