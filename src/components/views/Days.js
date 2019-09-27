@@ -8,11 +8,11 @@ const Days = () => {
         let background = "";
         let today = new Date().getDay() + 1;
         if (today === 7) {
-            today = 6;
+            today = 0;
         }
         let tomorrow = today + 1;
         if (tomorrow === 7) {
-            tomorrow = 6;
+            tomorrow = 0;
         }
         if (idx === today) {
             background = " blue-background white-text";

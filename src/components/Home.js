@@ -23,20 +23,9 @@ class Home extends Component {
         });
     }
 
-    sleep = (milliseconds) => {
-        var start = new Date().getTime();
-        for (var i = 0; i < 1e7; i++) {
-          if ((new Date().getTime() - start) > milliseconds){
-            break;
-          }
-        }
-      }
-
     componentDidMount() {
         const db = firebase.firestore();
-        console.log(db);
         let csedRef = db.collection('CSED21');
-
         // this was for writing the whole table from here to the firestore
         /*for (let i = 0; i < this.state.data.length; i++) {
             let uid = this.getUniqueID()
@@ -48,17 +37,19 @@ class Home extends Component {
 
         csedRef.orderBy("day", "asc").onSnapshot(querySnapshot => {
             let data = [];
+            let ids = [];
             querySnapshot.forEach(doc => {
                 data[doc.data().day] = doc.data().content;
+                ids[doc.data().day] = doc.id;
             })
-            this.setState({data});
+            this.setState({data, ids, csedRef});
         })
     }
 
     render() { 
         return (
             <div className="home flex-column justify align">
-                <Table data={this.state.data} />
+                <Table data={this.state.data} ids={this.state.ids} csedRef={this.state.csedRef} />
             </div>            
         );
     }

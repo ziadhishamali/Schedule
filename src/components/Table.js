@@ -13,20 +13,19 @@ class Table extends Component {
     }
 
     render() {
-        console.log(this.props.data, this.state.day);
         return (
             <div className="flex-column justify align">
                 <div className="flex-row justify align">
-                    <Banner title="Day" className="day orange-background"/>
-                    <Banner title="Time" className="time orange-background-2"/>
-                    <Banner title="Subject" className="content-name orange-background-2"/>
-                    <Banner title="Instructor" className="content-instructor orange-background-2"/>
-                    <Banner title="Type" className="content-type orange-background-2"/>
+                    <Banner title="Day" className="day day-2 green-background"/>
+                    <Banner title="Time" className="time green-background-2"/>
+                    <Banner title="Subject" className="content-name green-background-2"/>
+                    <Banner title="Instructor" className="content-instructor green-background-2"/>
+                    <Banner title="Type" className="content-type content-type-2 green-background-2"/>
                 </div>
                 <div className="table flex-row justify align">
                     <Days />
                     <Times />
-                    <Content contents={this.props.data}/>
+                    <Content contents={this.props.data} ids={this.props.ids} csedRef={this.props.csedRef} />
                 </div>
             </div> 
         );
